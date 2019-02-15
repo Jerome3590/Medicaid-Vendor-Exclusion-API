@@ -9,8 +9,6 @@ require(data.table)
 library(reticulate)
 library(aws.s3)
 
-browser()
-
 obj <-get_object("s3://medicaid-devops/UPDATED.csv")  
 csvcharobj <- rawToChar(obj)  
 con <- textConnection(csvcharobj)  
